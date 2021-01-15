@@ -93,10 +93,10 @@ public class JobData {
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
-        for (HashMap<String, String> row : allJobs) {
-            for (Map.Entry<String, String> jobAspect : row.entrySet()) {
+        for (HashMap<String, String> singleJob : allJobs) {
+            for (Map.Entry<String, String> jobAspect : singleJob.entrySet()) {
                 if (jobAspect.getValue().toLowerCase().contains(searchTerm)) {
-                    jobs.add(row);
+                    jobs.add(singleJob);
                 }
             }
         }
